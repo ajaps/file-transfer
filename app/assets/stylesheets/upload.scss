@@ -37,6 +37,9 @@ body {
     .select-file {
       cursor: pointer;
       color: royalblue;
+      left: 8em;
+      position: absolute;
+      font-size: 16px;
     }
 
     header {
@@ -348,6 +351,16 @@ body {
       width: 50%;
       color: darkblue;
       cursor: pointer;
+    }
+
+    .upload-btn {
+      top: 13em;
+      left: 4em;
+      position: absolute;
+      /* size: 20em; */
+      background-color: antiquewhite;
+      font-weight: bold;
+      font-size: 28px;
     }
   }
 

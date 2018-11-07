@@ -1,0 +1,29 @@
+
+<%= form_with(model: @upload, local: true) do |form| %>
+  <div class="upload">
+  <div class="upload-files">
+    <div class="view-files"><%= link_to ' Click to view uploaded files ', uploads_path, class: "btn-link new-upload-link" %></div>
+    <header>
+    <p>
+      <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+      <span class="up">up</span>
+      <span class="load">load</span>
+    </p>
+    </header>
+    <div class="body" id="drop">
+      <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
+    </div>
+    <%= form.file_field :files, class: "select-file", id: "file-input", multiple: true, direct_upload: true, required: true %>
+    <footer>
+    <div class="divider">
+      <span><AR>FILES</AR></span>
+    </div>
+    <div class="list-files">
+    </div>
+        <%= form.submit "Upload File", class: "btn button upload-btn" %>
+    </footer>
+  </div>
+  </div>
+<% end %>
+
+

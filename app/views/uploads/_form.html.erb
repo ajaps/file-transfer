@@ -1,0 +1,20 @@
+<%= form_with(model: upload, local: true) do |form| %>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <button class="close" data-dismiss="alert">×</button>
+      <%= value %>
+    </div>
+  <% end %>
+
+  <div class="file-upload">
+      <label for="file-input">
+          <%# <img src="<%= asset_path('upload.png') %>" />
+          <div id="selected-files"></div>
+      </label>
+      <%= form.file_field :files, id: "file-input", multiple: true, direct_upload: true, required: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Upload", class: "btn button" %>
+  </div>
+<% end %>
